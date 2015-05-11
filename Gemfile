@@ -54,6 +54,7 @@ gem 'httparty'
 gem 'bcrypt'
 gem 'mechanize'
 gem 'ru_propisju'
+gem 'ad_man'
 
 # Use unicorn as the app server
 # gem 'unicorn'
