@@ -6,9 +6,12 @@
 
 ###    _This site provides the film base with advertising banners._
 
-===
----
----	
+
+
+####In diagram the project looks like this:
+
+### ![alt tag](./filmbase_diagram.png)
+
 ---
 
 
