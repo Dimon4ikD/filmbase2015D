@@ -14,6 +14,7 @@ ru:
       country: Страна
       person: Персона
       film: Фильм
+      banner: Баннер
     attributes:
       user:
         name: Имя
@@ -48,6 +49,14 @@ ru:
         cover: Постер
         description: Описание
         people: Актеры
+        banner: Баннер
+      banner:
+        film: Фильм
+        image: Картинка
+        frequency: Частота
+        start_date: Дата начала
+        end_date: Дата окончания
+        click: Просмотр
 
 
 

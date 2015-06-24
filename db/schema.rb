@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428130455) do
+ActiveRecord::Schema.define(version: 20150611191659) do
+
+  create_table "banners", force: :cascade do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "frequency"
+    t.integer  "click"
+    t.time     "start_date"
+    t.time     "end_date"
+    t.integer  "film_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "banners", ["film_id"], name: "index_banners_on_film_id"
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"

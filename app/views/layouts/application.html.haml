@@ -1,4 +1,5 @@
 !!!
+
 %html
   %head
     %meta{charset: 'utf-8'}
@@ -9,5 +10,54 @@
   %body
     =render 'application/topbar'
     .container
+
       =render 'application/flash_messages'
+      =render 'banners/wheel'
+
+
+
+
+
+
       = yield
+
+
+
+-#
+-#.container
+-#
+-#  #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+-#    / Indicators
+-#    %ol.carousel-indicators
+-#      %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+-#      %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+-#      %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+-#    / Wrapper for slides
+-#    .carousel-inner{:role => "listbox"}
+-#    -#.item.active
+-#    -#  =image_tag ("banner1.jpg"), :height => "513", :width => "100"
+-#    -#  .carousel-caption
+-#    -#    =link_to 'Показать', @banner
+-#    -#.item
+-#    -#  =image_tag ("banner4.jpg"), :width => "1300"
+-#    -#  .carousel-caption
+-#    -#.item
+-#    -#  =image_tag ("banner5.jpg"), :width => "1300", align: "center"
+-#    -#  .carousel-caption
+-#
+-#        -@banners.each do |banner|
+-#          .item
+-#            -if !banner.image.blank?
+-#              -#-if banner.frequency !=0
+-#              =image_tag banner.image.url(:medium)
+-#            -else "нулл"
+-#
+-#
+-#    / Controls
+-#    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
+-#      %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+-#      %span.sr-only Назад
+-#    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
+-#      %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+-#      %span.sr-only Вперед
+-#

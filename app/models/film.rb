@@ -5,6 +5,7 @@ class Film < ActiveRecord::Base
   belongs_to :genre
   belongs_to :director, class_name: 'Person'
   has_and_belongs_to_many :people, -> { order(:name) }
+  has_many :banners
 
 
   validates :name, presence: true
@@ -29,6 +30,11 @@ class Film < ActiveRecord::Base
 
   def person_tokens=(val)
     self.person_ids=val.split(',')
+  end
+
+  def click
+    @banner = Banner.find params[:id]
+    @banner.increment!(:click)
   end
 
 

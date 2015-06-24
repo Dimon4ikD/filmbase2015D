@@ -8,8 +8,15 @@ class FilmsController < ApplicationController
     @films = Film.includes(:genre).ordering.page(params[:page])
   end
 
+  def click
+    @banner = Banner.find(params[:banner])
+    @banner.increment!(:click)
+  end
 
   def show
+    if params[:click]
+      @film.banner.click +=1
+    end
   end
 
   def new

@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_current_user
-
+  before_action :load_banners
+  # include BannersController
   private
 
   def set_current_user
@@ -16,6 +17,10 @@ class ApplicationController < ActionController::Base
       flash[:danger]="Доступ без авторизации запрещен"
       redirect_to login_path
     end
+  end
+
+  def load_banners
+    @banners=Banner.all
   end
 
   def admin_permission

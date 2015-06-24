@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :banners
   resources :films
   resources :people
   resources :countries
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy', as: :logout
 
+  # get 'banners/'
+  get '/click', to: 'films#click'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

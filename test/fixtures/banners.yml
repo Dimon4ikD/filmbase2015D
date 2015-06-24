@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  film_id: 
+  image: 
+  frequency: 1
+
+two:
+  film_id: 
+  image: 
+  frequency: 1
